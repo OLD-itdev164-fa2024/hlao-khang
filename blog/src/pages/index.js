@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
           <div>
             <GatsbyImage image={edge.node.heroImage.gatsbyImageData} />
           </div>
-          <div>{edge.node.body.childMarkdownRemark.except}</div>
+          <div>{edge.node.body.childMarkdownRemark.excerpt}</div>
         </li>
       ))}
     </ul>
