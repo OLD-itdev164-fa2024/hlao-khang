@@ -10,9 +10,11 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
 
-import { Header } from "./Header"
 import "./layout.css"
 import { Gray } from "./themes/Gray"
+import { Header } from "./Header"
+import { Main } from "./Main"
+import { Footer } from "./Footer"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -35,8 +37,8 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={Gray}>
       <Header siteTitle={data.site.siteMetadata.title || `Title`} />
       <Content>
-        <main>{children}</main>
-        <footer
+        <Main>{children}</Main>
+        <Footer
           style={{
             marginTop: "var(--space-5)",
             fontSize: "var(--font-sm)",
@@ -44,7 +46,7 @@ const Layout = ({ children }) => {
         >
           &copy; {new Date().getFullYear()} &middot; Built with {``}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        </Footer>
       </Content>
     </ThemeProvider>
   )
