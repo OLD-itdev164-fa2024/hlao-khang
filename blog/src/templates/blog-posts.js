@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-const BlogPost = ({ data }) => {
+const BLogPost = ({ data }) => {
   const { title, body } = data.contentfulBlogPost
 
   return (
@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
   )
 }
 
-export default BlogPost
+export default BLogPost
 
 export const pageQuery = graphql`
   query blogPostQuery($slug: String!) {

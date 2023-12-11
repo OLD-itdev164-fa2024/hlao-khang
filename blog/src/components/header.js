@@ -1,7 +1,7 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 const Outer = styled.header`
   background: ${props => props.theme.header.backgroundColor};
@@ -34,11 +34,11 @@ const Header = ({ siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: "",
 }
 
 export default Header
