@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Flex, Box } from "rebass"
 
-const BaseContainer = ({ children, flex = false, ...rest }) => {
+export const BaseContainer = ({ children, flex = false, ...rest }) => {
   let Component = flex ? Flex : Box
-  return <Component {...rest}></Component>
+  return <Component {...rest}>{children}</Component>
 }
 
 BaseContainer.propTypes = {
@@ -12,5 +12,3 @@ BaseContainer.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node.isRequired,
 }
-
-export { BaseContainer }
